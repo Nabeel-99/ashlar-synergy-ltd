@@ -1,5 +1,6 @@
 @import "tailwindcss";
-@import "@fontsource/montserrat";
+@import "@fontsource/montserrat/400.css";
+@import "@fontsource/montserrat/600.css";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
@@ -48,11 +49,6 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
 }
 
 @theme inline {
