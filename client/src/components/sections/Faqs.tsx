@@ -5,6 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "../ui/accordion";
+import MarqueeEffect from "../MarqueeEffect";
 
 const Faqs = () => {
   const questions = [
@@ -35,7 +36,7 @@ const Faqs = () => {
     },
   ];
   return (
-    <section className="flex flex-col gap-6 pb-10 items-center bg-[#f4f4f4] justify-center  h-full py-10 px-4 lg:px-20">
+    <section className="flex flex-col gap-6 pb-10 lg:pb-40 items-center bg-[#f4f4f4] justify-center  h-full py-10 px-4 lg:px-20">
       <div className="border rounded-full bg-white/40 p-2 px-4 shadow-md">
         <p className="text-sm">FAQs</p>
       </div>
@@ -63,8 +64,20 @@ const Faqs = () => {
           </AccordionItem>
         ))}
       </Accordion>
-      <div>
-        <p className="text-6xl font-bold"> We Build. We Develop. We Deliver.</p>
+      <div className="mt-10 lg:mt-24 mask-x-from-70%  w-full overflow-x-hidden  ">
+        <MarqueeEffect>
+          <div className="flex w-max marquee-effect-left">
+            {Array.from({ length: 14 }).map((_, index) => (
+              <span
+                key={index}
+                className="text-3xl lg:text-8xl  font-bold mr-4 "
+              >
+                {" "}
+                We deliver excellence.
+              </span>
+            ))}
+          </div>
+        </MarqueeEffect>
       </div>
     </section>
   );

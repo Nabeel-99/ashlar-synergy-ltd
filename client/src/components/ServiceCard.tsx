@@ -17,7 +17,7 @@ const ServiceCard = ({
   icon,
 }: ServiceCardProps) => {
   return (
-    <div className="border rounded-xl  overflow-hidden flex w-full p-4 flex-col gap-6 group">
+    <div className="border md:w-96 rounded-xl  overflow-hidden flex  p-4 flex-col gap-6 group">
       <div className="h-70 lg:h-44 overflow-hidden rounded-lg ">
         <img
           src={image}
