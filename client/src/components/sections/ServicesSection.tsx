@@ -8,51 +8,80 @@ import { Button } from "../ui/button";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import ServiceCard from "../ServiceCard";
 
-const Services = () => {
-  const services = [
-    {
-      icon: <MdOutlineEngineering />,
-      title: "Construction & Engineering",
-      description:
-        "Delivering quality infrastructure with expert design and planning.",
-      image: "/construction.jpg",
-      link: "",
-    },
-    {
-      icon: <PiTractorLight className="text-3xl" />,
-      title: " Agro-Allied Services",
-      description:
-        "Supporting modern agriculture with machinery and innovative solutions.",
-      image: "/agro.jpg",
-      link: "",
-    },
-    {
-      icon: <BsBoxSeam className="text-3xl" />,
-      title: "General Supplies",
-      description:
-        "Providing diverse, high-quality materials and equipment for every industry.",
-      image: "/supplies.jpg",
-      link: "",
-    },
+export const servicesData = [
+  {
+    icon: <MdOutlineEngineering className="text-3xl" />,
+    title: "Construction & Engineering",
+    description:
+      "Delivering quality infrastructure with expert design and planning.",
+    servicesProvided: [
+      "Planning and Design",
+      "Project Management",
+      "Site Supervision",
+      "Material & Resource Management",
+    ],
+    image: "/construction.jpg",
+    link: "",
+  },
+  {
+    icon: <PiTractorLight className="text-3xl" />,
+    title: " Agro-Allied Services",
+    description:
+      "Supporting modern agriculture with machinery and innovative solutions.",
+    servicesProvided: [
+      "Agrochemicals",
+      "Agricultural Machinery",
+      "Food Processing",
+      "Farm input Supply",
+    ],
+    image: "/agro.jpg",
+    link: "",
+  },
+  {
+    icon: <BsBoxSeam className="text-3xl" />,
+    title: "General Supplies",
+    description:
+      "Providing diverse, high-quality materials and equipment for every industry.",
+    servicesProvided: [
+      "Project Planning and Feasibility",
+      "Design and Permitting",
+      "Construction Management",
+      "Property Management",
+    ],
+    image: "/supplies.jpg",
+    link: "",
+  },
 
-    {
-      icon: <AiOutlineGlobal className="text-3xl" />,
-      title: "Import & Export",
-      description:
-        "Connecting markets globally with reliable trade and logistics services.",
-      image: "/exports.jpg",
-      link: "",
-    },
-    {
-      icon: <PiBuildingOfficeLight className="text-3xl" />,
-      title: "Property Development & Management",
-      description:
-        "From planning to maintenance — we build and manage properties efficiently.",
-      image: "/property.jpg",
-      link: "",
-    },
-  ];
-
+  {
+    icon: <AiOutlineGlobal className="text-3xl" />,
+    title: "Import & Export",
+    description:
+      "Connecting markets globally with reliable trade and logistics services.",
+    servicesProvided: [
+      "Trade Barriers",
+      "Trade Balance",
+      "Net Exports",
+      "Providing Security",
+    ],
+    image: "/exports.jpg",
+    link: "",
+  },
+  {
+    icon: <PiBuildingOfficeLight className="text-3xl" />,
+    title: "Property Development & Management",
+    description:
+      "From planning to maintenance — we build and manage properties efficiently.",
+    servicesProvided: [
+      "Broad Product Range",
+      "Office & Business Supplies",
+      "Procurement & Logistics",
+      "Construction and Building Supplies",
+    ],
+    image: "/property.jpg",
+    link: "",
+  },
+];
+const ServicesSection = () => {
   return (
     <section className="flex flex-col gap-6 items-center justify-center h-full py-10 px-4 lg:px-20">
       <div className="border rounded-full p-2 px-4 shadow-md">
@@ -89,7 +118,7 @@ const Services = () => {
           </div>
         </div>
         <div className="hidden xl:grid grid-cols-2  gap-4 w-full">
-          {services.slice(0, 4).map((service, index) => (
+          {servicesData.slice(0, 4).map((service, index) => (
             <div className="h-full" key={index}>
               <ServiceCard
                 title={service.title}
@@ -103,7 +132,7 @@ const Services = () => {
         </div>
       </div>
       <div className="xl:hidden flex flex-wrap items-center justify-center  gap-4 w-full">
-        {services.map((service, index) => (
+        {servicesData.map((service, index) => (
           <div className="h-full" key={index}>
             <ServiceCard
               title={service.title}
@@ -119,4 +148,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default ServicesSection;

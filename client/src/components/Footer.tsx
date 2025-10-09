@@ -2,14 +2,15 @@ import React from "react";
 import { HiOutlineMailOpen } from "react-icons/hi";
 import { MdOutlineLocalPhone } from "react-icons/md";
 import { LuMapPin } from "react-icons/lu";
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
-    <footer className="flex flex-col gap-10 p-4 lg:p-20  lg:px-20 ">
+    <footer className="flex flex-col gap-10 p-4 lg:p-20  lg:px-20 2xl:container 2xl:mx-auto mt-10 ">
       <div className="flex flex-col lg:flex-row gap-6 ">
         <div className="flex flex-col items-start text-white gap-4 p-10 rounded-lg bg-[#0d1e21] lg:w-1/2">
           <div className="flex flex-col gap-4  justify-start">
             <img
-              src="/logo4.jpeg"
+              src="/logo.png"
               alt="logo"
               className="h-30 w-30 object-cover"
             />
@@ -52,10 +53,21 @@ const Footer = () => {
             <div className="flex flex-col gap-2">
               <p className="font-bold">Quick Links</p>
               <ul className="flex flex-col gap-3 mt-4">
-                <li>Home</li>
-                <li>Services</li>
-                <li>About</li>
-                <li>Contact</li>
+                <li>
+                  <Link to={"/"}>Home</Link>{" "}
+                </li>
+                <li>
+                  {" "}
+                  <Link to={"/"}>Services</Link>{" "}
+                </li>
+                <li>
+                  {" "}
+                  <Link to={"/"}>About</Link>{" "}
+                </li>
+                <li>
+                  {" "}
+                  <Link to={"/"}>Contact</Link>{" "}
+                </li>
               </ul>
             </div>
           </div>

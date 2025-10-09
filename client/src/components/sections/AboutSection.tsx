@@ -1,6 +1,6 @@
 import React from "react";
 
-const About = () => {
+const AboutSection = () => {
   const aboutDetails = [
     {
       title: "Expertise Across Sectors",
@@ -56,4 +56,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AboutSection;
