@@ -15,24 +15,19 @@ export const questions = [
       "We specialize in Construction & Engineering, Agro-Allied, Property Development, Import & Export, and General Supplies.",
   },
   {
-    question: "Where is your company located?",
+    question: "How does Ashkar Synergy ensure quality across multiple sectors?",
     answer:
-      "Our head office is based in Abuja, Nigeria, with operations extending nationwide.",
+      "We implement strict project management practices, industry-standard quality checks, and continuously train our teams to maintain excellence in every sector we operate.",
   },
   {
-    question: "How can I contact Ashkar Synergy Limited?",
+    question: "Can Ashkar Synergy handle large-scale projects?",
     answer:
-      "You can reach us through our website’s contact form or by email at ashkarsynergy@yahoo.com.",
+      "Yes, we have the expertise, resources, and partnerships to manage projects of any scale, from small local contracts to large national developments.",
   },
   {
-    question: "How long has Ashkar Synergy Limited been in operation?",
+    question: "How does Ashkar Synergy support sustainable growth?",
     answer:
-      "Ashkar Synergy Limited has built a solid reputation over several years, founded on trust, quality, and a commitment to excellence across industries.",
-  },
-  {
-    question: "What makes Ashkar Synergy stand out?",
-    answer:
-      "Our strength lies in combining professionalism, innovation, and reliability across multiple sectors.",
+      "We prioritize eco-friendly methods, responsible sourcing, and community engagement to ensure that our projects not only succeed commercially but also positively impact the environment and society.",
   },
 ];
 const FaqsSection = () => {
