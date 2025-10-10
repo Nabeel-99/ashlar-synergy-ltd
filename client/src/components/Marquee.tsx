@@ -1,4 +1,3 @@
-import React from "react";
 import MarqueeEffect from "./MarqueeEffect";
 
 const Marquee = () => {
