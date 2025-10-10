@@ -93,7 +93,7 @@ const Services = () => {
           <h2 className="bg-clip-text our-service lg:text-center bg-gradient-to-r from-white from-50% to-white/30  text-transparent text-3xl lg:text-6xl  font-bold tracking-tight">
             Our Services
           </h2>
-          <p className="text-center service-page-text lg:text-lg md:max-w-xl">
+          <p className="text-center px-4 service-page-text lg:text-lg md:max-w-xl">
             {/* Delivering reliable and high-quality solutions across multiple
           sectors. */}
             Discover our comprehensive range of services across multiple
