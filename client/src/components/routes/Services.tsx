@@ -1,10 +1,11 @@
 import { IoLayersOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
-import { servicesData } from "../sections/ServicesSection";
+
 import { Button } from "../ui/button";
 import Marquee from "../Marquee";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { servicesData } from "@/lib/utils";
 
 const Services = () => {
   useGSAP(() => {
@@ -103,35 +104,40 @@ const Services = () => {
         </div>
       </section>
       <section className="flex flex-col services-container  px-4 lg:px-20 2xl:container 2xl:mx-auto">
-        {servicesData.map((service, index) => (
-          <div
-            className="flex service-page-card flex-col gap-10 lg:flex-row lg:gap-20 border-t py-10"
-            key={index}
-          >
-            <div className="lg:w-1/2 service-page-img group overflow-hidden rounded-lg">
-              <img
-                src={service.image}
-                alt=""
-                className="rounded-lg   aspect-square w-full h-80 lg:h-[400px] object-cover group-hover:scale-115 transition-transform duration-300 ease-in-out"
-              />
+        {servicesData.map((service, index) => {
+          const Icon = service.icon;
+          return (
+            <div
+              className="flex service-page-card flex-col gap-10 lg:flex-row lg:gap-20 border-t py-10"
+              key={index}
+            >
+              <div className="lg:w-1/2 service-page-img group overflow-hidden rounded-lg">
+                <img
+                  src={service.image}
+                  alt=""
+                  className="rounded-lg   aspect-square w-full h-80 lg:h-[400px] object-cover group-hover:scale-115 transition-transform duration-300 ease-in-out"
+                />
+              </div>
+              <div className="flex service-page-content flex-col gap-6 lg:w-1/2">
+                {<Icon className="text-3xl" />}
+                <h2 className="font-bold text-lg lg:text-xl">
+                  {service.title}
+                </h2>
+                <p>{service.description}</p>
+                <ul className="flex flex-col gap-2 list-disc ml-4">
+                  {service.servicesProvided.map((item, index) => (
+                    <li key={index} className="service-page-point">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <Link to={"/"} className="service-link">
+                  <Button className="cursor-pointer">Read More</Button>
+                </Link>
+              </div>
             </div>
-            <div className="flex service-page-content flex-col gap-6 lg:w-1/2">
-              {service.icon}
-              <h2 className="font-bold text-lg lg:text-xl">{service.title}</h2>
-              <p>{service.description}</p>
-              <ul className="flex flex-col gap-2 list-disc ml-4">
-                {service.servicesProvided.map((item, index) => (
-                  <li key={index} className="service-page-point">
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              <Link to={"/"} className="service-link">
-                <Button className="cursor-pointer">Read More</Button>
-              </Link>
-            </div>
-          </div>
-        ))}
+          );
+        })}
       </section>
       <Marquee />
     </div>

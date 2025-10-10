@@ -6,14 +6,14 @@ type ServiceCardProps = {
   description: string;
   image: string;
   link: string;
-  icon: any;
+  Icon: React.ElementType;
 };
 const ServiceCard = ({
   title,
   description,
   image,
   link,
-  icon,
+  Icon,
 }: ServiceCardProps) => {
   return (
     <Link
@@ -30,7 +30,7 @@ const ServiceCard = ({
 
       <div className="flex flex-col  gap-2">
         <div className="flex items-center justify-between gap-3">
-          {icon}
+          <Icon className="text-3xl" />
           <IoIosArrowRoundForward className="-rotate-45 group-hover:rotate-0 transition-transform duration-300 ease-in-out -translate-y-5 text-4xl" />
         </div>
         <h2 className="font-bold">{title}</h2>

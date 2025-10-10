@@ -8,28 +8,8 @@ import Marquee from "../Marquee";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useMediaQuery } from "react-responsive";
-export const questions = [
-  {
-    question: "What services does Ashkar Synergy Limited provide?",
-    answer:
-      "We specialize in Construction & Engineering, Agro-Allied, Property Development, Import & Export, and General Supplies.",
-  },
-  {
-    question: "How does Ashkar Synergy ensure quality across multiple sectors?",
-    answer:
-      "We implement strict project management practices, industry-standard quality checks, and continuously train our teams to maintain excellence in every sector we operate.",
-  },
-  {
-    question: "Can Ashkar Synergy handle large-scale projects?",
-    answer:
-      "Yes, we have the expertise, resources, and partnerships to manage projects of any scale, from small local contracts to large national developments.",
-  },
-  {
-    question: "How does Ashkar Synergy support sustainable growth?",
-    answer:
-      "We prioritize eco-friendly methods, responsible sourcing, and community engagement to ensure that our projects not only succeed commercially but also positively impact the environment and society.",
-  },
-];
+import { questions } from "@/lib/utils";
+
 const FaqsSection = () => {
   const isMobile = useMediaQuery({ maxWidth: 768 });
   useGSAP(() => {

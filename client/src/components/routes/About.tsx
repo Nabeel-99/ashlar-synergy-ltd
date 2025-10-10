@@ -2,28 +2,8 @@ import { useGSAP } from "@gsap/react";
 import Marquee from "../Marquee";
 import { IoLayersOutline } from "react-icons/io5";
 import gsap from "gsap";
+import { chooseDetails } from "@/lib/utils";
 const About = () => {
-  const chooseDetails = [
-    {
-      title: "Sustainable Impact",
-      description:
-        "Delivering solutions that create long-term value for businesses and communities.",
-      image: "/impact.jpg",
-    },
-    {
-      title: "Tailored Solutions",
-      description:
-        "Specialized approaches designed to fit each client’s unique needs and goals.",
-      image: "/solution.jpg",
-    },
-    {
-      title: "Commitment to Quality",
-      description:
-        "We uphold the highest standards in service delivery and project execution.",
-      image: "/inspection.jpg",
-    },
-  ];
-
   useGSAP(() => {
     gsap
       .timeline({

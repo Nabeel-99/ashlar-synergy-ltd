@@ -1,24 +1,8 @@
+import { aboutDetails } from "@/lib/utils";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useMediaQuery } from "react-responsive";
 const AboutSection = () => {
-  const aboutDetails = [
-    {
-      title: "Expertise Across Sectors",
-      description:
-        "From construction to agriculture and trade, we deliver tailored solutions that adapt to your unique needs.",
-    },
-    {
-      title: "	Client-Focused Approach",
-      description:
-        "Every project is built on collaboration, transparency, and measurable results.",
-    },
-    {
-      title: "Commitment to Quality",
-      description:
-        "We uphold the highest standards in service delivery and project execution.",
-    },
-  ];
   const isMobile = useMediaQuery({ maxWidth: 768 });
   useGSAP(() => {
     gsap

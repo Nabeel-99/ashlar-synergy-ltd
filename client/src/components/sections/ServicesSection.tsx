@@ -1,88 +1,12 @@
 import { MdOutlineEngineering } from "react-icons/md";
-import { PiTractorLight } from "react-icons/pi";
-import { PiBuildingOfficeLight } from "react-icons/pi";
-import { AiOutlineGlobal } from "react-icons/ai";
-import { BsBoxSeam } from "react-icons/bs";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import ServiceCard from "../ServiceCard";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Link } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
+import { servicesData } from "@/lib/utils";
 
-export const servicesData = [
-  {
-    icon: <MdOutlineEngineering className="text-3xl" />,
-    title: "Construction & Engineering",
-    description:
-      "Delivering quality infrastructure with expert design and planning.",
-    servicesProvided: [
-      "Planning and Design",
-      "Project Management",
-      "Site Supervision",
-      "Material & Resource Management",
-    ],
-    image: "/construction.jpg",
-    link: "/services",
-  },
-  {
-    icon: <PiTractorLight className="text-3xl" />,
-    title: " Agro-Allied Services",
-    description:
-      "Supporting modern agriculture with machinery and innovative solutions.",
-    servicesProvided: [
-      "Agrochemicals",
-      "Agricultural Machinery",
-      "Food Processing",
-      "Farm input Supply",
-    ],
-    image: "/agro.jpg",
-    link: "/services",
-  },
-  {
-    icon: <BsBoxSeam className="text-3xl" />,
-    title: "General Supplies",
-    description:
-      "Providing diverse, high-quality materials and equipment for every industry.",
-    servicesProvided: [
-      "Project Planning and Feasibility",
-      "Design and Permitting",
-      "Construction Management",
-      "Property Management",
-    ],
-    image: "/supplies.jpg",
-    link: "/services",
-  },
-
-  {
-    icon: <AiOutlineGlobal className="text-3xl" />,
-    title: "Import & Export",
-    description:
-      "Connecting markets globally with reliable trade and logistics services.",
-    servicesProvided: [
-      "Trade Barriers",
-      "Trade Balance",
-      "Net Exports",
-      "Providing Security",
-    ],
-    image: "/exports.jpg",
-    link: "/services",
-  },
-  {
-    icon: <PiBuildingOfficeLight className="text-3xl" />,
-    title: "Property Development & Management",
-    description:
-      "From planning to maintenance — we build and manage properties efficiently.",
-    servicesProvided: [
-      "Broad Product Range",
-      "Office & Business Supplies",
-      "Procurement & Logistics",
-      "Construction and Building Supplies",
-    ],
-    image: "/property.jpg",
-    link: "/services",
-  },
-];
 const ServicesSection = () => {
   const isMobile = useMediaQuery({ maxWidth: 768 });
   useGSAP(() => {
@@ -175,21 +99,21 @@ const ServicesSection = () => {
                 description={service.description}
                 image={service.image}
                 link={service.link}
-                icon={service.icon}
+                Icon={service.icon}
               />
             </div>
           ))}
         </div>
       </div>
       <div className="xl:hidden flex flex-wrap items-center justify-center  gap-4 w-full">
-        {servicesData.map((service, index) => (
+        {servicesData.slice(0, 4).map((service, index) => (
           <div className="h-full service-card" key={index}>
             <ServiceCard
               title={service.title}
               description={service.description}
               image={service.image}
               link={service.link}
-              icon={service.icon}
+              Icon={service.icon}
             />
           </div>
         ))}

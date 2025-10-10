@@ -3,12 +3,12 @@ import { IoLayersOutline } from "react-icons/io5";
 import { MdOutlineLocalPhone } from "react-icons/md";
 import { HiOutlineMailOpen } from "react-icons/hi";
 import { LuMapPin } from "react-icons/lu";
-import { questions } from "../sections/FaqsSection";
 import { Accordion, AccordionItem, AccordionTrigger } from "../ui/accordion";
 import { AccordionContent } from "@radix-ui/react-accordion";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ContactForm from "../ContactForm";
+import { questions } from "@/lib/utils";
 const Contact = () => {
   useGSAP(() => {
     gsap
@@ -91,14 +91,14 @@ const Contact = () => {
             </div>
 
             <div className="flex flex-col gap-2">
-              <div className="flex items-center gap-2 px-4 border p-3 rounded-xl">
+              <div className="flex items-center gap-2 px-4 border bg-[#fcfcfc] shadow-sm p-3 rounded-xl">
                 <div className="bg-[#0d1e21] p-3 rounded-full">
                   <MdOutlineLocalPhone className="lg:text-2xl text-white" />
                 </div>
 
                 <span>+234 901 234 5678</span>
               </div>
-              <div className="flex items-center gap-2 px-4 border p-3 rounded-xl">
+              <div className="flex items-center gap-2 px-4 border bg-[#fcfcfc] shadow-sm p-3 rounded-xl">
                 <div className="bg-[#0d1e21] p-3 rounded-full">
                   <HiOutlineMailOpen className="lg:text-2xl text-white" />
                 </div>
@@ -106,7 +106,7 @@ const Contact = () => {
                 <span>ashkarsynergy@yahoo.com</span>
               </div>
 
-              <div className="flex items-center gap-2 px-4 border p-3 rounded-xl">
+              <div className="flex items-center gap-2 px-4 border bg-[#fcfcfc] shadow-sm p-3 rounded-xl">
                 <div className="bg-[#0d1e21] p-3 rounded-full">
                   <LuMapPin className="lg:text-2xl text-white" />
                 </div>
