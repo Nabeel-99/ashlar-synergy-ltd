@@ -5,6 +5,7 @@ const ContactForm = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   };
+
   return (
     <form
       onSubmit={handleSubmit}
@@ -52,7 +53,7 @@ const ContactForm = () => {
         <textarea
           id="message"
           placeholder="Let us know how we can help."
-          className="border rounded-lg p-2  min-h-44 max-h-44"
+          className="border rounded-lg p-2 min-h-44 max-h-44 overflow-auto [overscroll-behavior:contain]"
           data-lenis-prevent
         />
       </div>
