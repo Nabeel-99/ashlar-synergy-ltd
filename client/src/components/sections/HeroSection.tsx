@@ -5,6 +5,7 @@ import { IoLayersOutline } from "react-icons/io5";
 import { Button } from "../ui/button";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { Link } from "react-router-dom";
 const HeroSection = () => {
   useGSAP(() => {
     gsap
@@ -51,9 +52,12 @@ const HeroSection = () => {
               growth.
             </p>
             <div className="flex lg:justify-center">
-              <Button className="bg-[#FFC72C] text-black p-6 px-10 lg:text-lg font-bold hover:bg-[#ffc72c]/90 cursor-pointer">
-                Explore our services
-              </Button>
+              <Link to={"/services"}>
+                {" "}
+                <Button className="bg-[#FFC72C] text-black p-6 px-10 lg:text-lg font-bold hover:bg-[#ffc72c]/90 cursor-pointer">
+                  Explore our services
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
