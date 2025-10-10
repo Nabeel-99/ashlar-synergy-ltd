@@ -70,7 +70,7 @@ const FaqsSection = () => {
               {question.question}
             </AccordionTrigger>
             <AccordionContent className="flex flex-col gap-4 text-balance">
-              <p className="lg:text-lg">{question.answer}</p>
+              <p className="text-sm lg:text-lg">{question.answer}</p>
             </AccordionContent>
           </AccordionItem>
         ))}
