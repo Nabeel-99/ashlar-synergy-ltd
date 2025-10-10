@@ -7,19 +7,70 @@ import { LuMapPin } from "react-icons/lu";
 import { questions } from "../sections/FaqsSection";
 import { Accordion, AccordionItem, AccordionTrigger } from "../ui/accordion";
 import { AccordionContent } from "@radix-ui/react-accordion";
-
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 const Contact = () => {
+  useGSAP(() => {
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: ".contact-page",
+          start: "top 60%",
+        },
+      })
+      .from(".contact-page-title", {
+        y: 50,
+        opacity: 0,
+        duration: 0.8,
+      })
+      .from(
+        ".contact-page-subtitle",
+        {
+          y: 50,
+          opacity: 0,
+          duration: 0.8,
+        },
+        "-=0.5"
+      )
+      .from(".contact-info", {
+        x: -50,
+        opacity: 0,
+        duration: 0.8,
+      })
+      .from(
+        ".contact-form",
+        {
+          x: 50,
+          opacity: 0,
+          duration: 0.8,
+        },
+        "<"
+      );
+
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: ".contact-faq-section",
+          start: "top 60%",
+        },
+      })
+      .from(".contact-faq-section", {
+        y: 100,
+        opacity: 0,
+        duration: 0.8,
+      });
+  });
   return (
-    <div className="flex flex-col relative  h-full">
+    <div className="flex flex-col relative contact-page h-full">
       <section className="min-h-[300px]  text-white bg-[#0d1e21] w-full flex flex-col items-center justify-center gap-4  z-20 overflow-hidden">
         <div className="relative w-full 2xl:container 2xl:mx-auto flex flex-col gap-4 items-center justify-center lg:px-20 ">
           <div className="max-sm:hidden absolute top-10 right-0  xl:right-28   z-0 -translate-y-44">
             <IoLayersOutline className="text-[400px] lg:text-[600px] text-[#f4f4f4]/10" />
           </div>
-          <h2 className="bg-clip-text lg:text-center bg-gradient-to-r from-white from-50% to-white/30  text-transparent text-3xl lg:text-6xl  font-bold tracking-tight">
+          <h2 className="bg-clip-text contact-page-title lg:text-center bg-gradient-to-r from-white from-50% to-white/30  text-transparent text-3xl lg:text-6xl  font-bold tracking-tight">
             Get in touch
           </h2>
-          <p className="text-center px-2 lg:text-lg md:max-w-xl">
+          <p className="text-center px-2 contact-page-subtitle lg:text-lg md:max-w-xl">
             {/* Delivering reliable and high-quality solutions across multiple
       sectors. */}
             We’d love to hear from you. Whether you have a question, a project
@@ -29,7 +80,7 @@ const Contact = () => {
       </section>
       <section className="flex flex-col 2xl:container 2xl:mx-auto px-4 lg:px-20 gap-10 pb-20 mt-20">
         <div className="flex flex-col gap-10 lg:flex-row lg:justify-between lg:gap-20">
-          <div className="flex flex-col gap-10 justify-between w-full lg:gap-3 ">
+          <div className="flex flex-col contact-info gap-10 justify-between w-full lg:gap-3 ">
             <div className="flex flex-col gap-4">
               <h2 className="text-xl font-bold">Reach Out To Us</h2>
               <p className="text-lg">
@@ -64,7 +115,7 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          <div className="w-full">
+          <div className="w-full contact-form">
             <form className="border p-6 rounded-lg flex flex-col gap-6 w-full">
               <div className="grid lg:grid-cols-2 items-center gap-2 w-full">
                 <div className="flex flex-col gap-2">
@@ -118,7 +169,7 @@ const Contact = () => {
           </div>
         </div>
       </section>
-      <section className="lg:px-20 px-4 flex flex-col gap-10 items-center mt-10 lg:mt-20 2xl:container 2xl:mx-auto">
+      <section className="lg:px-20 px-4 contact-faq-section flex flex-col gap-10 items-center mt-10 lg:mt-20 2xl:container 2xl:mx-auto">
         <div className="border rounded-full bg-white/50 p-2 px-4 shadow-md">
           <p className="text-sm">FAQs</p>
         </div>

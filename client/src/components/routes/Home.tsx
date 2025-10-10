@@ -6,7 +6,7 @@ import ContactSection from "../sections/ContactSection";
 
 const Home = () => {
   return (
-    <div className="">
+    <div className="overflow-hidden">
       <HeroSection />
       <ServicesSection />
       <AboutSection />

@@ -1,13 +1,19 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { CiMenuFries } from "react-icons/ci";
 import { IoCloseOutline } from "react-icons/io5";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { Link } from "react-router-dom";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  useEffect(() => {
+  useGSAP(() => {
     if (isOpen) {
+      gsap.from(".burger-menu", {
+        opacity: 0,
+        y: -50,
+      });
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "";
@@ -71,9 +77,9 @@ const Navbar = () => {
         </div>
       </div>
       {isOpen && (
-        <div className="absolute inset-0  backdrop-blur-2xl text-white h-screen w-full">
+        <div className="absolute burger-menu inset-0  backdrop-blur-2xl text-white h-screen w-full">
           <div className="px-4 mt-20 h-full w-full">
-            <ul className="flex flex-col  gap-3">
+            <ul className="flex flex-col text-lg  gap-6">
               <li>
                 <Link onClick={() => setIsOpen(false)} to="/">
                   Home

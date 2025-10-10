@@ -5,7 +5,9 @@ import {
   AccordionTrigger,
 } from "../ui/accordion";
 import Marquee from "../Marquee";
-
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { useMediaQuery } from "react-responsive";
 export const questions = [
   {
     question: "What services does Ashkar Synergy Limited provide?",
@@ -34,8 +36,23 @@ export const questions = [
   },
 ];
 const FaqsSection = () => {
+  const isMobile = useMediaQuery({ maxWidth: 768 });
+  useGSAP(() => {
+    gsap.from("#faqs", {
+      scrollTrigger: {
+        trigger: "#faqs",
+        start: isMobile ? "top 60%" : "top 80%",
+      },
+      opacity: 0,
+      y: 100,
+      duration: 0.8,
+    });
+  });
   return (
-    <section className="flex flex-col gap-6 pb-10 lg:pb-40 items-center bg-[#f4f4f4] justify-center  h-full py-10 px-4 lg:px-20">
+    <section
+      id="faqs"
+      className="flex flex-col gap-6 pb-10 lg:pb-40 items-center bg-[#f4f4f4] justify-center  lg:mt-20 lg:pt-30 h-full py-10 px-4 lg:px-20"
+    >
       <div className="border rounded-full bg-white/40 p-2 px-4 shadow-md">
         <p className="text-sm">FAQs</p>
       </div>

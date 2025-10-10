@@ -57,15 +57,15 @@ const Footer = () => {
                 </li>
                 <li>
                   {" "}
-                  <Link to={"/"}>Services</Link>{" "}
+                  <Link to={"/services"}>Services</Link>{" "}
                 </li>
                 <li>
                   {" "}
-                  <Link to={"/"}>About</Link>{" "}
+                  <Link to={"/about"}>About</Link>{" "}
                 </li>
                 <li>
                   {" "}
-                  <Link to={"/"}>Contact</Link>{" "}
+                  <Link to={"/contact"}>Contact</Link>{" "}
                 </li>
               </ul>
             </div>

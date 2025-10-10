@@ -5,6 +5,12 @@
 
 @custom-variant dark (&:is(.dark *));
 
+.hero-text span {
+  background: linear-gradient(to right, #fff 50%, rgba(255, 255, 255, 0.3));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -130,4 +136,13 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Ensure hover effects work with GSAP animations */
+.service-img {
+  transition: transform 0.3s ease-in-out !important;
+}
+
+.group:hover .service-img {
+  transform: scale(1.1) !important;
 }
