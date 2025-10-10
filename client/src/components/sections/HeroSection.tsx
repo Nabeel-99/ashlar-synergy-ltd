@@ -40,6 +40,7 @@ const HeroSection = () => {
             <img
               src="/hero.jpg"
               alt="hero"
+              loading="eager"
               className="rounded-lg w-full hero-img  h-full lg:h-[500px] aspect-square  object-cover"
             />
           </div>
