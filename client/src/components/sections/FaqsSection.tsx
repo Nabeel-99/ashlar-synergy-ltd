@@ -5,7 +5,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "../ui/accordion";
-import MarqueeEffect from "../MarqueeEffect";
 import Marquee from "../Marquee";
 
 export const questions = [

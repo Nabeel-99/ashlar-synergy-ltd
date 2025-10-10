@@ -1,6 +1,4 @@
-import React from "react";
 import { IoLayersOutline } from "react-icons/io5";
-import { MdOutlineEngineering } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { servicesData } from "../sections/ServicesSection";
 import { Button } from "../ui/button";

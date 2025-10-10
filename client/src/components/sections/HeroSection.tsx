@@ -1,6 +1,6 @@
 // FFC72C gold
 // 006400 green
-import { VscLayers } from "react-icons/vsc";
+
 import { IoLayersOutline } from "react-icons/io5";
 import { Button } from "../ui/button";
 const HeroSection = () => {

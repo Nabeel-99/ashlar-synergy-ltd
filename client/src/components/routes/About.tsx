@@ -1,7 +1,5 @@
-import React from "react";
 import Marquee from "../Marquee";
 import { IoLayersOutline } from "react-icons/io5";
-import { MdOutbond } from "react-icons/md";
 
 const About = () => {
   const chooseDetails = [

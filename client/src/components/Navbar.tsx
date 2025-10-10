@@ -1,13 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { CiMenuFries } from "react-icons/ci";
 import { IoCloseOutline } from "react-icons/io5";
-import { Button } from "./ui/button";
 import { IoIosArrowRoundForward } from "react-icons/io";
-import { useMediaQuery } from "react-responsive";
 import { Link } from "react-router-dom";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const isMobile = useMediaQuery({ maxWidth: 767 });
 
   useEffect(() => {
     if (isOpen) {

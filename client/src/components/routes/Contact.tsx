@@ -1,4 +1,3 @@
-import React from "react";
 import Marquee from "../Marquee";
 import { IoLayersOutline } from "react-icons/io5";
 import { Button } from "../ui/button";

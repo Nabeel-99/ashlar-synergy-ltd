@@ -1,6 +1,6 @@
 import React from "react";
 import { IoIosArrowRoundForward } from "react-icons/io";
-import { MdOutlineEngineering } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 type ServiceCardProps = {
   title: string;
@@ -17,7 +17,10 @@ const ServiceCard = ({
   icon,
 }: ServiceCardProps) => {
   return (
-    <div className="border md:w-96 rounded-xl  overflow-hidden flex  p-4 flex-col gap-6 group">
+    <Link
+      to={link}
+      className="border md:w-96 rounded-xl  overflow-hidden flex  p-4 flex-col gap-6 group"
+    >
       <div className="h-70 lg:h-44 overflow-hidden rounded-lg ">
         <img
           src={image}
@@ -34,7 +37,7 @@ const ServiceCard = ({
         <h2 className="font-bold">{title}</h2>
         <p>{description}</p>
       </div>
-    </div>
+    </Link>
   );
 };
 
