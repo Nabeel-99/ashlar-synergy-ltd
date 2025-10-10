@@ -1,4 +1,3 @@
-import React from "react";
 import { HiOutlineMailOpen } from "react-icons/hi";
 import { MdOutlineLocalPhone } from "react-icons/md";
 import { LuMapPin } from "react-icons/lu";

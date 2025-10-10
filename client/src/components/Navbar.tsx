@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { CiMenuFries } from "react-icons/ci";
 import { IoCloseOutline } from "react-icons/io5";
 import { IoIosArrowRoundForward } from "react-icons/io";

@@ -1,4 +1,3 @@
-import React from "react";
 import { MdOutlineEngineering } from "react-icons/md";
 import { PiTractorLight } from "react-icons/pi";
 import { PiBuildingOfficeLight } from "react-icons/pi";
